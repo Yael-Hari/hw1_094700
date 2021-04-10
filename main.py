@@ -11,6 +11,12 @@ def main(argv):
 
 
 def Q1(data):
+    """
+    this func prints the requirements for Q1
+    :param data: dict
+    :return: none
+    """
+
     print("Question 1:")
     features = ["hum", "t1", "cnt"]
     summer = (dt.filter_by_feature(data, "season", {1}))[0]
@@ -25,6 +31,11 @@ def Q1(data):
 
 
 def Q2(data):
+    """
+    this func prints the requirements for Q2
+    :param data: dict
+    :return: none
+    """
     winter_time = (dt.filter_by_feature(data, "season", {3}))[0]
     yes_holiday, no_holiday = dt.filter_by_feature(winter_time, "is_holiday", {1})
 

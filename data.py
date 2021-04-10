@@ -6,6 +6,12 @@ def main():
 
 
 def load_data(path, features):
+    """
+    this func turns the .csv file into dict, keeping only needed columns
+    :param path: string: path to .csv file
+    :param features: list: columns to keep
+    :return: dict with features as keys
+    """
     df = pd.read_csv(path)
     data = df.to_dict('list')
     keys = list(data.keys())
@@ -16,6 +22,13 @@ def load_data(path, features):
 
 
 def filter_by_feature(data, feature, values):
+    """
+    splits data to dicts with needed records and the rest in another dict
+    :param data: dict
+    :param feature: the feature by which to split the dict
+    :param values: set: containing the values of the feature by which to split the dict
+    :return: tuple: (data1, data2) data1 contains the records with the right values, and data2 the rest
+    """
     data1 = dict()
     data2 = dict()
     for key in data.keys():
