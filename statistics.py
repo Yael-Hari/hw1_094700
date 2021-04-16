@@ -45,6 +45,17 @@ statistic_functions = [sum, mean, median]
 
 
 def population_statistics(feature_description, data, treatment, target, threshold, is_above, statistic_functions):
+    """
+     this func calculate and prints the mean and median of a feature above or below a threshold
+     :param feature_description: features of the wanted data
+     :param data: dict of values
+     :param treatment: category of checked threshold
+     :param target: category calculated and printed data
+     :param threshold: numeric value of the threshold
+     :param is_above: bool var indicates on calculation above or below the threshold
+     :param statistic_functions: functions that are being used to calculate mean and median
+     :return: prints (feature_description, target category, stat_info1; stat_info2)
+     """
     stat_func = statistic_functions
     recorded_values = []
     if is_above:
