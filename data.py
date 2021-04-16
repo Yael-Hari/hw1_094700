@@ -1,10 +1,6 @@
 import pandas as pd
 
 
-def main():
-    pass
-
-
 def load_data(path, features):
     """
     this func turns the .csv file into dict, keeping only needed columns
@@ -43,11 +39,25 @@ def filter_by_feature(data, feature, values):
 
 
 def add_to_dict(main_dict, second_dict, i):
+    """
+    this func adding record from main dict to the second dict
+    :param main_dict: dict from which to add the record
+    :param second_dict: dict to which to add the record
+    :param i: int: number of record in main dict to add
+    :return: none
+    """
     for key in main_dict.keys():
         second_dict[key].append((main_dict[key])[i])
 
 
 def print_details(data, features, statistic_functions):
+    """
+    func that prints the output of question 1
+    :param data: dict
+    :param features: list of features for which to print statistics
+    :param statistic_functions: list of methods that returns statistics details
+    :return: none
+    """
     for feature in features:
         print("%s: " % feature, end="")
         for i in range(len(statistic_functions)):
@@ -61,7 +71,3 @@ def print_details(data, features, statistic_functions):
                 print(", ", end="")
             else:
                 print()
-
-
-if __name__ == '__main__':
-    main()

@@ -1,10 +1,6 @@
 from math import ceil
 
 
-def main():
-    pass
-
-
 def sum(values):
     """
     this func sums a list of values
@@ -60,7 +56,3 @@ def population_statistics(feature_description, data, treatment, target, threshol
             if data[treatment][i] <= threshold:
                 recorded_values.append(data[target][i])
     print(f"{feature_description}:\n{target}: {stat_func[1](recorded_values)}, {stat_func[2](recorded_values)}")
-
-
-if __name__ == "__main__":
-    main()
