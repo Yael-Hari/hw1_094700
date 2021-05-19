@@ -1,1 +1,1 @@
-python main.py london_sample.csv "hum, t1, cnt, season, is_holiday"
+python main.py london.csv "hum, t1, cnt, season, is_holiday"
